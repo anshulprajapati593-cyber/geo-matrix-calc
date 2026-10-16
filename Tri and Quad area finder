@@ -1,0 +1,47 @@
+print("Welcome to the matrix solver")
+print("What do you wan tme to solve?")
+print("1.Area of Triangle(vertices-coords)")
+print("2.Area of a Quadrilateral(vertices-coords)")
+object=int(input("Enter the number of the corresponding option:"))
+
+if object == 1:
+    print("----Vertice_1----")
+    x1 = int(input("Enter the x coordinate here: "))
+    y1 = int(input("Enter the y coordinate here: "))
+
+    print("----Vertice_2----")
+    x2 = int(input("Enter the x coordinate here: "))
+    y2 = int(input("Enter the y coordinate here: "))
+
+    print("----Vertice_3----")
+    x3 = int(input("Enter the x coordinate here: "))
+    y3 = int(input("Enter the y coordinate here: "))
+
+    area_t = abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2
+
+    print(f"The area of the triangle is: {area_t}")
+
+elif object == 2:
+    print("----Vertice_1----")
+    x1 = int(input("Enter the x coordinate here: "))
+    y1 = int(input("Enter the y coordinate here: "))
+    
+    print("----Vertice_2----")
+    x2 = int(input("Enter the x coordinate here: "))
+    y2 = int(input("Enter the y coordinate here: "))
+    
+    print("----Vertice_3----")
+    x3 = int(input("Enter the x coordinate here: "))
+    y3 = int(input("Enter the y coordinate here: "))
+
+    print("----Vertice_4----")
+    x4 = int(input("Enter the x coordinate here: "))
+    y4 = int(input("Enter the y coordiante here: "))
+
+    right_laces = (x1*y2) + (x2*y3) + (x3*y4) + (x4*y1)
+
+    left_laces = (y1*x2) + (y2*x3) + (y3*x4) + (y4*x1)
+
+    area_q = abs(right_laces - left_laces) / 2
+
+    print(f"The area of the quadrilateral is: {area_q}")
